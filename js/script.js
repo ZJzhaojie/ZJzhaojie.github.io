@@ -285,7 +285,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
   }
 
   $(function () {
-	  console.log(11);
+	  console.log('有空一起写代码');
     action.smoothScroll();
     action.loading();
     action.fab();
