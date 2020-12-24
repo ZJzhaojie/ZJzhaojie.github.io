@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>沙雕网友</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="2222">
+<meta property="og:type" content="website">
+<meta property="og:title" content="沙雕网友">
+<meta property="og:url" content="https://zjzhaojie.github.io/index.html">
+<meta property="og:site_name" content="沙雕网友">
+<meta property="og:description" content="2222">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="沙雕网友">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="沙雕网友" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="./css/style.css">
+
+  
+<link rel="stylesheet" href="./plugin/bganimation/bg.css">
+
+  
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" rel="stylesheet" type="text/css">
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <div class="widget-wrap mobile-header">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="https://avatars0.githubusercontent.com/u/20333903?v=3&amp;s=460">
+    <h2 class="author">沙雕网友</h2>
+    <h3 class="description">2222</h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>5</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>0</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>0</strong><br>标签</div></a>
+    </div>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+        <section id="main">
+  
+    <article id="post-获取数组对象里面所有分支" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="./2020/12/24/%E8%8E%B7%E5%8F%96%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E9%87%8C%E9%9D%A2%E6%89%80%E6%9C%89%E5%88%86%E6%94%AF/" class="article-date">
+  <time class="post-time" datetime="2020-12-24T13:41:12.000Z" itemprop="datePublished">
+    <span class="post-month">12月</span><br/>
+    <span class="post-day">24</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="./2020/12/24/%E8%8E%B7%E5%8F%96%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E9%87%8C%E9%9D%A2%E6%89%80%E6%9C%89%E5%88%86%E6%94%AF/">获取数组对象里面所有分支</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>有一条数据 我需要拿到用户选择的最后一级的type</p>
+<figure class="highlight plain"><figcaption><span>list </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">let list &#x3D; [&#123;</span><br><span class="line">	name: &#39;一级1&#39;,</span><br><span class="line">	type: 1,</span><br><span class="line">	children: [&#123;</span><br><span class="line">			name: &#39;二级1&#39;,</span><br><span class="line">			type: 2,</span><br><span class="line">			children: [&#123;</span><br><span class="line">				name: &#39;三级1&#39;,</span><br><span class="line">				type: 3,</span><br><span class="line">				children: []</span><br><span class="line">			&#125;]</span><br><span class="line">		&#125;,</span><br><span class="line">		&#123;</span><br><span class="line">			name: &#39;二级2&#39;,</span><br><span class="line">			type: 4,</span><br><span class="line">			children: [&#123;</span><br><span class="line">				name: &#39;二级3&#39;,</span><br><span class="line">				type: 5,</span><br><span class="line">				children: []</span><br><span class="line">			&#125;]</span><br><span class="line">		&#125;</span><br><span class="line">	]</span><br><span class="line">&#125;, &#123;</span><br><span class="line">	name: &#39;一级2&#39;,</span><br><span class="line">	type: 6,</span><br><span class="line">	children: []</span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure>
+
+<p>移动端表单有个选择框：</p>
+<img src="C:\Users\Administrator\Desktop\md\4b514a71d67ecec63959e0cf1b87bd7.png" alt="4b514a71d67ecec63959e0cf1b87bd7" width="400px" style="zoom:80%;" />
+
+<p>滑动一级菜单会有问题</p>
+<p><img src="C:\Users\Administrator\Desktop\md\01224211400.png" alt="01224211400"></p>
+<p> 因为是多列联动模式 但是我的第二条数据只有一级， 我的解决方案是把数据处理一下 </p>
+<p>把最后一级的name跟它的所有父级拼接起来 并拿到最后一级的type  push 到一个数组中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">this.recursion1(list, &#39;&#39;)</span><br><span class="line">&#x2F;&#x2F;第一次调用时value传空就行</span><br><span class="line">recursion1(list, value) &#123;</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">	list.map(item &#x3D;&gt; &#123;</span><br><span class="line">	&#x2F;&#x2F;用父级的name和自己的name拼接 得到新的name text字段s</span><br><span class="line">		item.text &#x3D; value + item.name</span><br><span class="line">		if (item.children &amp;&amp; item.children.length !&#x3D;&#x3D; 0) &#123;</span><br><span class="line">		&#x2F;&#x2F;存在子级时把text传入  以此循环 </span><br><span class="line">			this.recursion1(item.children, item.text)</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">		&#x2F;&#x2F;走到最后一级 放入数组存放</span><br><span class="line">			this.list.push(&#123;</span><br><span class="line">				type: item.type,</span><br><span class="line">				name: item.text</span><br><span class="line">			&#125;)</span><br><span class="line">			delete item.children</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\Administrator\Desktop\md\1224212855.png" alt="1224212855"></p>
+<p>现在只需要换成单列选择器就ok</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://zjzhaojie.github.io/2020/12/24/%E8%8E%B7%E5%8F%96%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E9%87%8C%E9%9D%A2%E6%89%80%E6%9C%89%E5%88%86%E6%94%AF/" data-id="ckj2wcz080000jcuqcx4p8jbz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-ssss" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="./2020/12/04/ssss/" class="article-date">
+  <time class="post-time" datetime="2020-12-04T14:49:37.000Z" itemprop="datePublished">
+    <span class="post-month">12月</span><br/>
+    <span class="post-day">04</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="./2020/12/04/ssss/">ssss</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#125;,</span><br><span class="line">methods: &#123;&#125;,</span><br><span class="line">watch: &#123;&#125;,</span><br><span class="line">computed:&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">components: &#123;&#125;,</span><br><span class="line">data () &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;&#125;</span><br><span class="line">&#125;,</span><br><span class="line"><span class="function"><span class="title">created</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">&#125;,</span><br><span class="line">mounted () &#123;</span><br><span class="line"></span><br><span class="line">&#125;,</span><br><span class="line">methods: &#123;&#125;,</span><br><span class="line">watch: &#123;&#125;,</span><br><span class="line">computed:&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://zjzhaojie.github.io/2020/12/04/ssss/" data-id="ckiae28v10000nouqh5nb0oyb" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-ssss1111" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="./2020/12/04/ssss1111/" class="article-date">
+  <time class="post-time" datetime="2020-12-04T14:49:37.000Z" itemprop="datePublished">
+    <span class="post-month">12月</span><br/>
+    <span class="post-day">04</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="./2020/12/04/ssss1111/">ssss</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#125;,</span><br><span class="line">methods: &#123;&#125;,</span><br><span class="line">watch: &#123;&#125;,</span><br><span class="line">computed:&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">components: &#123;&#125;,</span><br><span class="line">data () &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;&#125;</span><br><span class="line">&#125;,</span><br><span class="line"><span class="function"><span class="title">created</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">&#125;,</span><br><span class="line">mounted () &#123;</span><br><span class="line"></span><br><span class="line">&#125;,</span><br><span class="line">methods: &#123;&#125;,</span><br><span class="line">watch: &#123;&#125;,</span><br><span class="line">computed:&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://zjzhaojie.github.io/2020/12/04/ssss1111/" data-id="ckiae8pe90000lwuqgl1b5d62" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-post-title-with-whitespace" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="./2020/11/23/post-title-with-whitespace/" class="article-date">
+  <time class="post-time" datetime="2020-11-23T10:19:02.000Z" itemprop="datePublished">
+    <span class="post-month">11月</span><br/>
+    <span class="post-day">23</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="./2020/11/23/post-title-with-whitespace/">post title with whitespace</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>sda </p>
+<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://zjzhaojie.github.io/2020/11/23/post-title-with-whitespace/" data-id="ckhueee1c00009ouqhw5n0zod" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-hello-world" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="./2020/11/23/hello-world/" class="article-date">
+  <time class="post-time" datetime="2020-11-23T07:51:48.486Z" itemprop="datePublished">
+    <span class="post-month">11月</span><br/>
+    <span class="post-day">23</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="./2020/11/23/hello-world/">Hello World</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://zjzhaojie.github.io/2020/11/23/hello-world/" data-id="ckhu9bzf50000nsuq4k9qc5pf" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+
+</section>
+        
+          <aside id="sidebar">
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <h1 class="blog-title">沙雕网友</h1>
+    <h2 class="blog-subtitle">有时间一起敲代码</h2>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="https://avatars0.githubusercontent.com/u/20333903?v=3&amp;s=460">
+    <h2 class="author">沙雕网友</h2>
+    <h3 class="description">2222</h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>5</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>0</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>0</strong><br>标签</div></a>
+    </div>
+
+
+
+    <div class="social-link">
+      
+        <a class="hvr-bounce-in" href="https://gitee.com/ZJzhaojie" target="_blank" title="Gitee">
+          Gitee
+        </a>
+      
+    </div>
+
+    <div class="friend-link">
+      <h2>友情链接</h2>
+      
+        <a class="hvr-bounce-in" href="http://www.baidu.com" target="_blank" title="ShanaMaid">
+          ShanaMaid
+        </a>
+      
+    </div>
+  </div>
+</div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy;2019 - 2020 沙雕网友<br>
+      由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动 | 
+      主题-<a target="_blank" rel="noopener" href="https://github.com/ShanaMaid/hexo-theme-shana">Shana</a>
+      
+    </div>
+    
+  </div>
+</footer>
+    </div>
+    
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//apps.bdimg.com/libs/wow/0.1.6/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>   
+
+
+  
+<link rel="stylesheet" href="./plugin/fancybox/jquery.fancybox.css">
+
+  
+<script src="./plugin/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+  
+<link rel="stylesheet" href="./plugin/galmenu/GalMenu.css">
+
+  
+<script src="./plugin/galmenu/GalMenu.js"></script>
+
+  <div class="GalMenu GalDropDown">
+      <div class="circle" id="gal">
+        <div class="ring">
+          
+            <a href="./" title="" class="menuItem">首页</a>
+          
+            <a href="./tags" title="" class="menuItem">标签</a>
+          
+            <a href="./categories" title="" class="menuItem">分类</a>
+          
+            <a href="./archives" title="" class="menuItem">归档</a>
+          
+            <a href="./xxxxxxxxx" title="" class="menuItem">xxx</a>
+          
+            <a href="./xxxxxxx" title="" class="menuItem">xxxx</a>
+          
+        </div>
+        
+          <audio id="audio" src="#"></audio>
+        
+      </div> 
+</div>
+<div id="overlay" style="opacity: 1; cursor: pointer;"></div>
+  <script type="text/javascript">var items = document.querySelectorAll('.menuItem');
+    for (var i = 0,
+    l = items.length; i < l; i++) {
+      items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+      items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
+    }</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').GalMenu({
+      'menu': 'GalDropDown'
+    })
+  });
+</script>
+
+  <section class="hidden-xs"> 
+  <ul class="cb-slideshow"> 
+    <li><span>苟利</span></li> 
+    <li><span>国家</span></li> 
+    <li><span>生死以</span></li> 
+    <li><span>岂能</span></li> 
+    <li><span>祸福</span></li> 
+    <li><span>趋避之</span></li> 
+  </ul>
+</section>
+
+<script src="./js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
