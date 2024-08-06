@@ -1,20 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>-</title>
-    <style>
-      #app{
-        width: 100wh;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D</title>
+  <style>
+    .box {
+      margin: 50px;
+      width: 100px;
+      height: 100px;
+      background-color: lightsalmon;
+      transition: all 0.6s;
+	 
+    }
+  </style>
+</head>
+
+<body>
+  <button id="button">click me</button>
+  <div class="box" style="transform:rotate(0deg)">1</div>
+  <script>
+    let btn = document.getElementById("button")
+    let oBox = document.getElementsByClassName("box")[0]
+    let timer = null
+    btn.addEventListener("click", () => {
+      clearInterval(timer)
+    })
+    function rotate() {
+      let deg = oBox.style.transform.match(/rotate\((\d+)deg\)/)[1];
+      deg = (Number(deg) + 90)%360
+      oBox.style.transform = `rotate(${deg}deg)`
+      if(deg == 0) {
+        oBox.style = "transform:rotate(-90deg); transition:none;"
+        oBox.getBoundingClientRect()
+        oBox.style = ""
+        oBox.style.transform = `rotate(${deg}deg)`
       }
-    </style>
-  </head>
-  <body>
-    <div id="app">我爱你！！！</div>
-  </body>
+    }
+    timer = setInterval(rotate, 1000)
+  </script>
+</body>
+
 </html>
